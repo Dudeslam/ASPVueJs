@@ -1,0 +1,765 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{60F28DC5-034D-43D3-BACD-D670387C9E48}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MVCVueJsApp</RootNamespace>
+    <AssemblyName>MVCVueJsApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44330</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IndexViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="vue-project\.gitignore" />
+    <Content Include="vue-project\index.html" />
+    <Content Include="vue-project\node_modules\%40babel\parser\bin\babel-parser.js" />
+    <Content Include="vue-project\node_modules\%40babel\parser\lib\index.js" />
+    <Content Include="vue-project\node_modules\%40vitejs\plugin-vue\dist\index.js" />
+    <Content Include="vue-project\node_modules\%40vue\compiler-core\dist\compiler-core.cjs.js" />
+    <Content Include="vue-project\node_modules\%40vue\compiler-core\dist\compiler-core.cjs.prod.js" />
+    <Content Include="vue-project\node_modules\%40vue\compiler-core\dist\compiler-core.esm-bundler.js" />
+    <Content Include="vue-project\node_modules\%40vue\compiler-core\index.js" />
+    <Content Include="vue-project\node_modules\%40vue\compiler-dom\dist\compiler-dom.cjs.js" />
+    <Content Include="vue-project\node_modules\%40vue\compiler-dom\dist\compiler-dom.cjs.prod.js" />
+    <Content Include="vue-project\node_modules\%40vue\compiler-dom\dist\compiler-dom.esm-browser.js" />
+    <Content Include="vue-project\node_modules\%40vue\compiler-dom\dist\compiler-dom.esm-browser.prod.js" />
+    <Content Include="vue-project\node_modules\%40vue\compiler-dom\dist\compiler-dom.esm-bundler.js" />
+    <Content Include="vue-project\node_modules\%40vue\compiler-dom\dist\compiler-dom.global.js" />
+    <Content Include="vue-project\node_modules\%40vue\compiler-dom\dist\compiler-dom.global.prod.js" />
+    <Content Include="vue-project\node_modules\%40vue\compiler-dom\index.js" />
+    <Content Include="vue-project\node_modules\%40vue\compiler-sfc\dist\compiler-sfc.cjs.js" />
+    <Content Include="vue-project\node_modules\%40vue\compiler-sfc\dist\compiler-sfc.esm-browser.js" />
+    <Content Include="vue-project\node_modules\%40vue\compiler-ssr\dist\compiler-ssr.cjs.js" />
+    <Content Include="vue-project\node_modules\%40vue\reactivity-transform\dist\reactivity-transform.cjs.js" />
+    <Content Include="vue-project\node_modules\%40vue\reactivity\dist\reactivity.cjs.js" />
+    <Content Include="vue-project\node_modules\%40vue\reactivity\dist\reactivity.cjs.prod.js" />
+    <Content Include="vue-project\node_modules\%40vue\reactivity\dist\reactivity.esm-browser.js" />
+    <Content Include="vue-project\node_modules\%40vue\reactivity\dist\reactivity.esm-browser.prod.js" />
+    <Content Include="vue-project\node_modules\%40vue\reactivity\dist\reactivity.esm-bundler.js" />
+    <Content Include="vue-project\node_modules\%40vue\reactivity\dist\reactivity.global.js" />
+    <Content Include="vue-project\node_modules\%40vue\reactivity\dist\reactivity.global.prod.js" />
+    <Content Include="vue-project\node_modules\%40vue\reactivity\index.js" />
+    <Content Include="vue-project\node_modules\%40vue\runtime-core\dist\runtime-core.cjs.js" />
+    <Content Include="vue-project\node_modules\%40vue\runtime-core\dist\runtime-core.cjs.prod.js" />
+    <Content Include="vue-project\node_modules\%40vue\runtime-core\dist\runtime-core.esm-bundler.js" />
+    <Content Include="vue-project\node_modules\%40vue\runtime-core\index.js" />
+    <Content Include="vue-project\node_modules\%40vue\runtime-dom\dist\runtime-dom.cjs.js" />
+    <Content Include="vue-project\node_modules\%40vue\runtime-dom\dist\runtime-dom.cjs.prod.js" />
+    <Content Include="vue-project\node_modules\%40vue\runtime-dom\dist\runtime-dom.esm-browser.js" />
+    <Content Include="vue-project\node_modules\%40vue\runtime-dom\dist\runtime-dom.esm-browser.prod.js" />
+    <Content Include="vue-project\node_modules\%40vue\runtime-dom\dist\runtime-dom.esm-bundler.js" />
+    <Content Include="vue-project\node_modules\%40vue\runtime-dom\dist\runtime-dom.global.js" />
+    <Content Include="vue-project\node_modules\%40vue\runtime-dom\dist\runtime-dom.global.prod.js" />
+    <Content Include="vue-project\node_modules\%40vue\runtime-dom\index.js" />
+    <Content Include="vue-project\node_modules\%40vue\server-renderer\dist\server-renderer.cjs.js" />
+    <Content Include="vue-project\node_modules\%40vue\server-renderer\dist\server-renderer.cjs.prod.js" />
+    <Content Include="vue-project\node_modules\%40vue\server-renderer\dist\server-renderer.esm-bundler.js" />
+    <Content Include="vue-project\node_modules\%40vue\server-renderer\index.js" />
+    <Content Include="vue-project\node_modules\%40vue\shared\dist\shared.cjs.js" />
+    <Content Include="vue-project\node_modules\%40vue\shared\dist\shared.cjs.prod.js" />
+    <Content Include="vue-project\node_modules\%40vue\shared\dist\shared.esm-bundler.js" />
+    <Content Include="vue-project\node_modules\%40vue\shared\index.js" />
+    <Content Include="vue-project\node_modules\.vite\vue.js" />
+    <Content Include="vue-project\node_modules\esbuild-windows-64\esbuild.exe" />
+    <Content Include="vue-project\node_modules\esbuild\install.js" />
+    <Content Include="vue-project\node_modules\esbuild\lib\main.js" />
+    <Content Include="vue-project\node_modules\estree-walker\dist\esm\estree-walker.js" />
+    <Content Include="vue-project\node_modules\estree-walker\dist\umd\estree-walker.js" />
+    <Content Include="vue-project\node_modules\estree-walker\src\async.js" />
+    <Content Include="vue-project\node_modules\estree-walker\src\index.js" />
+    <Content Include="vue-project\node_modules\estree-walker\src\sync.js" />
+    <Content Include="vue-project\node_modules\estree-walker\src\walker.js" />
+    <Content Include="vue-project\node_modules\function-bind\implementation.js" />
+    <Content Include="vue-project\node_modules\function-bind\index.js" />
+    <Content Include="vue-project\node_modules\function-bind\test\index.js" />
+    <Content Include="vue-project\node_modules\has\src\index.js" />
+    <Content Include="vue-project\node_modules\has\test\index.js" />
+    <Content Include="vue-project\node_modules\is-core-module\index.js" />
+    <Content Include="vue-project\node_modules\is-core-module\test\index.js" />
+    <Content Include="vue-project\node_modules\magic-string\dist\magic-string.cjs.js" />
+    <Content Include="vue-project\node_modules\magic-string\dist\magic-string.es.js" />
+    <Content Include="vue-project\node_modules\magic-string\dist\magic-string.umd.js" />
+    <Content Include="vue-project\node_modules\nanoid\async\index.browser.js" />
+    <Content Include="vue-project\node_modules\nanoid\async\index.js" />
+    <Content Include="vue-project\node_modules\nanoid\async\index.native.js" />
+    <Content Include="vue-project\node_modules\nanoid\index.browser.js" />
+    <Content Include="vue-project\node_modules\nanoid\index.js" />
+    <Content Include="vue-project\node_modules\nanoid\nanoid.js" />
+    <Content Include="vue-project\node_modules\nanoid\non-secure\index.js" />
+    <Content Include="vue-project\node_modules\nanoid\url-alphabet\index.js" />
+    <Content Include="vue-project\node_modules\path-parse\index.js" />
+    <Content Include="vue-project\node_modules\picocolors\picocolors.browser.js" />
+    <Content Include="vue-project\node_modules\picocolors\picocolors.js" />
+    <Content Include="vue-project\node_modules\postcss\lib\at-rule.js" />
+    <Content Include="vue-project\node_modules\postcss\lib\comment.js" />
+    <Content Include="vue-project\node_modules\postcss\lib\container.js" />
+    <Content Include="vue-project\node_modules\postcss\lib\css-syntax-error.js" />
+    <Content Include="vue-project\node_modules\postcss\lib\declaration.js" />
+    <Content Include="vue-project\node_modules\postcss\lib\document.js" />
+    <Content Include="vue-project\node_modules\postcss\lib\fromJSON.js" />
+    <Content Include="vue-project\node_modules\postcss\lib\input.js" />
+    <Content Include="vue-project\node_modules\postcss\lib\lazy-result.js" />
+    <Content Include="vue-project\node_modules\postcss\lib\list.js" />
+    <Content Include="vue-project\node_modules\postcss\lib\map-generator.js" />
+    <Content Include="vue-project\node_modules\postcss\lib\no-work-result.js" />
+    <Content Include="vue-project\node_modules\postcss\lib\node.js" />
+    <Content Include="vue-project\node_modules\postcss\lib\parse.js" />
+    <Content Include="vue-project\node_modules\postcss\lib\parser.js" />
+    <Content Include="vue-project\node_modules\postcss\lib\postcss.js" />
+    <Content Include="vue-project\node_modules\postcss\lib\previous-map.js" />
+    <Content Include="vue-project\node_modules\postcss\lib\processor.js" />
+    <Content Include="vue-project\node_modules\postcss\lib\result.js" />
+    <Content Include="vue-project\node_modules\postcss\lib\root.js" />
+    <Content Include="vue-project\node_modules\postcss\lib\rule.js" />
+    <Content Include="vue-project\node_modules\postcss\lib\stringifier.js" />
+    <Content Include="vue-project\node_modules\postcss\lib\stringify.js" />
+    <Content Include="vue-project\node_modules\postcss\lib\symbols.js" />
+    <Content Include="vue-project\node_modules\postcss\lib\terminal-highlight.js" />
+    <Content Include="vue-project\node_modules\postcss\lib\tokenize.js" />
+    <Content Include="vue-project\node_modules\postcss\lib\warn-once.js" />
+    <Content Include="vue-project\node_modules\postcss\lib\warning.js" />
+    <Content Include="vue-project\node_modules\resolve\async.js" />
+    <Content Include="vue-project\node_modules\resolve\example\async.js" />
+    <Content Include="vue-project\node_modules\resolve\example\sync.js" />
+    <Content Include="vue-project\node_modules\resolve\index.js" />
+    <Content Include="vue-project\node_modules\resolve\lib\async.js" />
+    <Content Include="vue-project\node_modules\resolve\lib\caller.js" />
+    <Content Include="vue-project\node_modules\resolve\lib\core.js" />
+    <Content Include="vue-project\node_modules\resolve\lib\homedir.js" />
+    <Content Include="vue-project\node_modules\resolve\lib\is-core.js" />
+    <Content Include="vue-project\node_modules\resolve\lib\node-modules-paths.js" />
+    <Content Include="vue-project\node_modules\resolve\lib\normalize-options.js" />
+    <Content Include="vue-project\node_modules\resolve\lib\sync.js" />
+    <Content Include="vue-project\node_modules\resolve\sync.js" />
+    <Content Include="vue-project\node_modules\resolve\test\core.js" />
+    <Content Include="vue-project\node_modules\resolve\test\dotdot.js" />
+    <Content Include="vue-project\node_modules\resolve\test\dotdot\abc\index.js" />
+    <Content Include="vue-project\node_modules\resolve\test\dotdot\index.js" />
+    <Content Include="vue-project\node_modules\resolve\test\faulty_basedir.js" />
+    <Content Include="vue-project\node_modules\resolve\test\filter.js" />
+    <Content Include="vue-project\node_modules\resolve\test\filter_sync.js" />
+    <Content Include="vue-project\node_modules\resolve\test\home_paths.js" />
+    <Content Include="vue-project\node_modules\resolve\test\home_paths_sync.js" />
+    <Content Include="vue-project\node_modules\resolve\test\mock.js" />
+    <Content Include="vue-project\node_modules\resolve\test\mock_sync.js" />
+    <Content Include="vue-project\node_modules\resolve\test\module_dir.js" />
+    <Content Include="vue-project\node_modules\resolve\test\module_dir\xmodules\aaa\index.js" />
+    <Content Include="vue-project\node_modules\resolve\test\module_dir\ymodules\aaa\index.js" />
+    <Content Include="vue-project\node_modules\resolve\test\module_dir\zmodules\bbb\main.js" />
+    <Content Include="vue-project\node_modules\resolve\test\node-modules-paths.js" />
+    <Content Include="vue-project\node_modules\resolve\test\node_path.js" />
+    <Content Include="vue-project\node_modules\resolve\test\node_path\x\aaa\index.js" />
+    <Content Include="vue-project\node_modules\resolve\test\node_path\x\ccc\index.js" />
+    <Content Include="vue-project\node_modules\resolve\test\node_path\y\bbb\index.js" />
+    <Content Include="vue-project\node_modules\resolve\test\node_path\y\ccc\index.js" />
+    <Content Include="vue-project\node_modules\resolve\test\nonstring.js" />
+    <Content Include="vue-project\node_modules\resolve\test\pathfilter.js" />
+    <Content Include="vue-project\node_modules\resolve\test\pathfilter\deep_ref\main.js" />
+    <Content Include="vue-project\node_modules\resolve\test\precedence.js" />
+    <Content Include="vue-project\node_modules\resolve\test\precedence\aaa.js" />
+    <Content Include="vue-project\node_modules\resolve\test\precedence\aaa\index.js" />
+    <Content Include="vue-project\node_modules\resolve\test\precedence\aaa\main.js" />
+    <Content Include="vue-project\node_modules\resolve\test\precedence\bbb.js" />
+    <Content Include="vue-project\node_modules\resolve\test\precedence\bbb\main.js" />
+    <Content Include="vue-project\node_modules\resolve\test\resolver.js" />
+    <Content Include="vue-project\node_modules\resolve\test\resolver\baz\doom.js" />
+    <Content Include="vue-project\node_modules\resolve\test\resolver\baz\quux.js" />
+    <Content Include="vue-project\node_modules\resolve\test\resolver\browser_field\a.js" />
+    <Content Include="vue-project\node_modules\resolve\test\resolver\browser_field\b.js" />
+    <Content Include="vue-project\node_modules\resolve\test\resolver\dot_main\index.js" />
+    <Content Include="vue-project\node_modules\resolve\test\resolver\dot_slash_main\index.js" />
+    <Content Include="vue-project\node_modules\resolve\test\resolver\foo.js" />
+    <Content Include="vue-project\node_modules\resolve\test\resolver\incorrect_main\index.js" />
+    <Content Include="vue-project\node_modules\resolve\test\resolver\malformed_package_json\index.js" />
+    <Content Include="vue-project\node_modules\resolve\test\resolver\mug.js" />
+    <Content Include="vue-project\node_modules\resolve\test\resolver\multirepo\packages\package-a\index.js" />
+    <Content Include="vue-project\node_modules\resolve\test\resolver\multirepo\packages\package-b\index.js" />
+    <Content Include="vue-project\node_modules\resolve\test\resolver\nested_symlinks\mylib\async.js" />
+    <Content Include="vue-project\node_modules\resolve\test\resolver\nested_symlinks\mylib\sync.js" />
+    <Content Include="vue-project\node_modules\resolve\test\resolver\other_path\lib\other-lib.js" />
+    <Content Include="vue-project\node_modules\resolve\test\resolver\other_path\root.js" />
+    <Content Include="vue-project\node_modules\resolve\test\resolver\quux\foo\index.js" />
+    <Content Include="vue-project\node_modules\resolve\test\resolver\same_names\foo.js" />
+    <Content Include="vue-project\node_modules\resolve\test\resolver\same_names\foo\index.js" />
+    <Content Include="vue-project\node_modules\resolve\test\resolver\symlinked\package\bar.js" />
+    <Content Include="vue-project\node_modules\resolve\test\resolver\symlinked\_\node_modules\foo.js" />
+    <Content Include="vue-project\node_modules\resolve\test\resolver\without_basedir\main.js" />
+    <Content Include="vue-project\node_modules\resolve\test\resolver_sync.js" />
+    <Content Include="vue-project\node_modules\resolve\test\shadowed_core.js" />
+    <Content Include="vue-project\node_modules\resolve\test\shadowed_core\node_modules\util\index.js" />
+    <Content Include="vue-project\node_modules\resolve\test\subdirs.js" />
+    <Content Include="vue-project\node_modules\resolve\test\symlinks.js" />
+    <Content Include="vue-project\node_modules\rollup\dist\es\rollup.browser.js" />
+    <Content Include="vue-project\node_modules\rollup\dist\es\rollup.js" />
+    <Content Include="vue-project\node_modules\rollup\dist\es\shared\rollup.js" />
+    <Content Include="vue-project\node_modules\rollup\dist\es\shared\watch.js" />
+    <Content Include="vue-project\node_modules\rollup\dist\loadConfigFile.js" />
+    <Content Include="vue-project\node_modules\rollup\dist\rollup.browser.js" />
+    <Content Include="vue-project\node_modules\rollup\dist\rollup.js" />
+    <Content Include="vue-project\node_modules\rollup\dist\shared\index.js" />
+    <Content Include="vue-project\node_modules\rollup\dist\shared\loadConfigFile.js" />
+    <Content Include="vue-project\node_modules\rollup\dist\shared\mergeOptions.js" />
+    <Content Include="vue-project\node_modules\rollup\dist\shared\rollup.js" />
+    <Content Include="vue-project\node_modules\rollup\dist\shared\watch-cli.js" />
+    <Content Include="vue-project\node_modules\rollup\dist\shared\watch.js" />
+    <Content Include="vue-project\node_modules\source-map-js\lib\array-set.js" />
+    <Content Include="vue-project\node_modules\source-map-js\lib\base64-vlq.js" />
+    <Content Include="vue-project\node_modules\source-map-js\lib\base64.js" />
+    <Content Include="vue-project\node_modules\source-map-js\lib\binary-search.js" />
+    <Content Include="vue-project\node_modules\source-map-js\lib\mapping-list.js" />
+    <Content Include="vue-project\node_modules\source-map-js\lib\quick-sort.js" />
+    <Content Include="vue-project\node_modules\source-map-js\lib\source-map-consumer.js" />
+    <Content Include="vue-project\node_modules\source-map-js\lib\source-map-generator.js" />
+    <Content Include="vue-project\node_modules\source-map-js\lib\source-node.js" />
+    <Content Include="vue-project\node_modules\source-map-js\lib\util.js" />
+    <Content Include="vue-project\node_modules\source-map-js\source-map.js" />
+    <Content Include="vue-project\node_modules\source-map\dist\source-map.debug.js" />
+    <Content Include="vue-project\node_modules\source-map\dist\source-map.js" />
+    <Content Include="vue-project\node_modules\source-map\dist\source-map.min.js" />
+    <Content Include="vue-project\node_modules\source-map\lib\array-set.js" />
+    <Content Include="vue-project\node_modules\source-map\lib\base64-vlq.js" />
+    <Content Include="vue-project\node_modules\source-map\lib\base64.js" />
+    <Content Include="vue-project\node_modules\source-map\lib\binary-search.js" />
+    <Content Include="vue-project\node_modules\source-map\lib\mapping-list.js" />
+    <Content Include="vue-project\node_modules\source-map\lib\quick-sort.js" />
+    <Content Include="vue-project\node_modules\source-map\lib\source-map-consumer.js" />
+    <Content Include="vue-project\node_modules\source-map\lib\source-map-generator.js" />
+    <Content Include="vue-project\node_modules\source-map\lib\source-node.js" />
+    <Content Include="vue-project\node_modules\source-map\lib\util.js" />
+    <Content Include="vue-project\node_modules\source-map\source-map.js" />
+    <Content Include="vue-project\node_modules\sourcemap-codec\dist\sourcemap-codec.es.js" />
+    <Content Include="vue-project\node_modules\sourcemap-codec\dist\sourcemap-codec.umd.js" />
+    <Content Include="vue-project\node_modules\supports-preserve-symlinks-flag\browser.js" />
+    <Content Include="vue-project\node_modules\supports-preserve-symlinks-flag\index.js" />
+    <Content Include="vue-project\node_modules\supports-preserve-symlinks-flag\test\index.js" />
+    <Content Include="vue-project\node_modules\vite\bin\vite.js" />
+    <Content Include="vue-project\node_modules\vite\dist\node\chunks\dep-00df106d.js" />
+    <Content Include="vue-project\node_modules\vite\dist\node\chunks\dep-2056ae8a.js" />
+    <Content Include="vue-project\node_modules\vite\dist\node\chunks\dep-383194a7.js" />
+    <Content Include="vue-project\node_modules\vite\dist\node\chunks\dep-56143c31.js" />
+    <Content Include="vue-project\node_modules\vite\dist\node\chunks\dep-9c153816.js" />
+    <Content Include="vue-project\node_modules\vite\dist\node\chunks\dep-ec2e68f4.js" />
+    <Content Include="vue-project\node_modules\vite\dist\node\cli.js" />
+    <Content Include="vue-project\node_modules\vite\dist\node\index.js" />
+    <Content Include="vue-project\node_modules\vite\dist\node\terser.js" />
+    <Content Include="vue-project\node_modules\vue\compiler-sfc\index.js" />
+    <Content Include="vue-project\node_modules\vue\dist\vue.cjs.js" />
+    <Content Include="vue-project\node_modules\vue\dist\vue.cjs.prod.js" />
+    <Content Include="vue-project\node_modules\vue\dist\vue.esm-browser.js" />
+    <Content Include="vue-project\node_modules\vue\dist\vue.esm-browser.prod.js" />
+    <Content Include="vue-project\node_modules\vue\dist\vue.esm-bundler.js" />
+    <Content Include="vue-project\node_modules\vue\dist\vue.global.js" />
+    <Content Include="vue-project\node_modules\vue\dist\vue.global.prod.js" />
+    <Content Include="vue-project\node_modules\vue\dist\vue.runtime.esm-browser.js" />
+    <Content Include="vue-project\node_modules\vue\dist\vue.runtime.esm-browser.prod.js" />
+    <Content Include="vue-project\node_modules\vue\dist\vue.runtime.esm-bundler.js" />
+    <Content Include="vue-project\node_modules\vue\dist\vue.runtime.global.js" />
+    <Content Include="vue-project\node_modules\vue\dist\vue.runtime.global.prod.js" />
+    <Content Include="vue-project\node_modules\vue\index.js" />
+    <Content Include="vue-project\node_modules\vue\server-renderer\index.js" />
+    <Content Include="vue-project\public\favicon.ico" />
+    <Content Include="vue-project\src\assets\base.css" />
+    <Content Include="vue-project\src\assets\logo.svg" />
+    <Content Include="vue-project\src\main.js" />
+    <Content Include="vue-project\vite.config.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="vue-project\.vscode\extensions.json" />
+    <Content Include="vue-project\node_modules\%40babel\parser\CHANGELOG.md" />
+    <Content Include="vue-project\node_modules\%40babel\parser\lib\index.js.map" />
+    <Content Include="vue-project\node_modules\%40babel\parser\LICENSE" />
+    <Content Include="vue-project\node_modules\%40babel\parser\package.json" />
+    <Content Include="vue-project\node_modules\%40babel\parser\README.md" />
+    <Content Include="vue-project\node_modules\%40vitejs\plugin-vue\LICENSE" />
+    <Content Include="vue-project\node_modules\%40vitejs\plugin-vue\package.json" />
+    <Content Include="vue-project\node_modules\%40vitejs\plugin-vue\README.md" />
+    <Content Include="vue-project\node_modules\%40vue\compiler-core\LICENSE" />
+    <Content Include="vue-project\node_modules\%40vue\compiler-core\package.json" />
+    <Content Include="vue-project\node_modules\%40vue\compiler-core\README.md" />
+    <Content Include="vue-project\node_modules\%40vue\compiler-dom\LICENSE" />
+    <Content Include="vue-project\node_modules\%40vue\compiler-dom\package.json" />
+    <Content Include="vue-project\node_modules\%40vue\compiler-dom\README.md" />
+    <Content Include="vue-project\node_modules\%40vue\compiler-sfc\LICENSE" />
+    <Content Include="vue-project\node_modules\%40vue\compiler-sfc\package.json" />
+    <Content Include="vue-project\node_modules\%40vue\compiler-sfc\README.md" />
+    <Content Include="vue-project\node_modules\%40vue\compiler-ssr\LICENSE" />
+    <Content Include="vue-project\node_modules\%40vue\compiler-ssr\package.json" />
+    <Content Include="vue-project\node_modules\%40vue\compiler-ssr\README.md" />
+    <Content Include="vue-project\node_modules\%40vue\reactivity-transform\package.json" />
+    <Content Include="vue-project\node_modules\%40vue\reactivity-transform\README.md" />
+    <Content Include="vue-project\node_modules\%40vue\reactivity\LICENSE" />
+    <Content Include="vue-project\node_modules\%40vue\reactivity\package.json" />
+    <Content Include="vue-project\node_modules\%40vue\reactivity\README.md" />
+    <Content Include="vue-project\node_modules\%40vue\runtime-core\LICENSE" />
+    <Content Include="vue-project\node_modules\%40vue\runtime-core\package.json" />
+    <Content Include="vue-project\node_modules\%40vue\runtime-core\README.md" />
+    <Content Include="vue-project\node_modules\%40vue\runtime-dom\LICENSE" />
+    <Content Include="vue-project\node_modules\%40vue\runtime-dom\package.json" />
+    <Content Include="vue-project\node_modules\%40vue\runtime-dom\README.md" />
+    <Content Include="vue-project\node_modules\%40vue\server-renderer\LICENSE" />
+    <Content Include="vue-project\node_modules\%40vue\server-renderer\package.json" />
+    <Content Include="vue-project\node_modules\%40vue\server-renderer\README.md" />
+    <Content Include="vue-project\node_modules\%40vue\shared\LICENSE" />
+    <Content Include="vue-project\node_modules\%40vue\shared\package.json" />
+    <Content Include="vue-project\node_modules\%40vue\shared\README.md" />
+    <Content Include="vue-project\node_modules\.bin\esbuild" />
+    <Content Include="vue-project\node_modules\.bin\esbuild.cmd" />
+    <Content Include="vue-project\node_modules\.bin\esbuild.ps1" />
+    <Content Include="vue-project\node_modules\.bin\nanoid" />
+    <Content Include="vue-project\node_modules\.bin\nanoid.cmd" />
+    <Content Include="vue-project\node_modules\.bin\nanoid.ps1" />
+    <Content Include="vue-project\node_modules\.bin\parser" />
+    <Content Include="vue-project\node_modules\.bin\parser.cmd" />
+    <Content Include="vue-project\node_modules\.bin\parser.ps1" />
+    <Content Include="vue-project\node_modules\.bin\resolve" />
+    <Content Include="vue-project\node_modules\.bin\resolve.cmd" />
+    <Content Include="vue-project\node_modules\.bin\resolve.ps1" />
+    <Content Include="vue-project\node_modules\.bin\rollup" />
+    <Content Include="vue-project\node_modules\.bin\rollup.cmd" />
+    <Content Include="vue-project\node_modules\.bin\rollup.ps1" />
+    <Content Include="vue-project\node_modules\.bin\vite" />
+    <Content Include="vue-project\node_modules\.bin\vite.cmd" />
+    <Content Include="vue-project\node_modules\.bin\vite.ps1" />
+    <Content Include="vue-project\node_modules\.package-lock.json" />
+    <Content Include="vue-project\node_modules\.vite\package.json" />
+    <Content Include="vue-project\node_modules\.vite\vue.js.map" />
+    <Content Include="vue-project\node_modules\.vite\_metadata.json" />
+    <Content Include="vue-project\node_modules\csstype\index.js.flow" />
+    <Content Include="vue-project\node_modules\csstype\LICENSE" />
+    <Content Include="vue-project\node_modules\csstype\package.json" />
+    <Content Include="vue-project\node_modules\csstype\README.md" />
+    <Content Include="vue-project\node_modules\esbuild-windows-64\bin\esbuild" />
+    <Content Include="vue-project\node_modules\esbuild-windows-64\package.json" />
+    <Content Include="vue-project\node_modules\esbuild-windows-64\README.md" />
+    <Content Include="vue-project\node_modules\esbuild\bin\esbuild" />
+    <Content Include="vue-project\node_modules\esbuild\package.json" />
+    <Content Include="vue-project\node_modules\esbuild\README.md" />
+    <Content Include="vue-project\node_modules\estree-walker\CHANGELOG.md" />
+    <Content Include="vue-project\node_modules\estree-walker\dist\esm\package.json" />
+    <Content Include="vue-project\node_modules\estree-walker\LICENSE" />
+    <Content Include="vue-project\node_modules\estree-walker\package.json" />
+    <Content Include="vue-project\node_modules\estree-walker\README.md" />
+    <Content Include="vue-project\node_modules\estree-walker\src\package.json" />
+    <Content Include="vue-project\node_modules\estree-walker\types\tsconfig.tsbuildinfo" />
+    <Content Include="vue-project\node_modules\function-bind\.editorconfig" />
+    <Content Include="vue-project\node_modules\function-bind\.eslintrc" />
+    <Content Include="vue-project\node_modules\function-bind\.jscs.json" />
+    <Content Include="vue-project\node_modules\function-bind\.npmignore" />
+    <Content Include="vue-project\node_modules\function-bind\.travis.yml" />
+    <Content Include="vue-project\node_modules\function-bind\LICENSE" />
+    <Content Include="vue-project\node_modules\function-bind\package.json" />
+    <Content Include="vue-project\node_modules\function-bind\README.md" />
+    <Content Include="vue-project\node_modules\function-bind\test\.eslintrc" />
+    <Content Include="vue-project\node_modules\has\LICENSE-MIT" />
+    <Content Include="vue-project\node_modules\has\package.json" />
+    <Content Include="vue-project\node_modules\has\README.md" />
+    <Content Include="vue-project\node_modules\is-core-module\.eslintrc" />
+    <Content Include="vue-project\node_modules\is-core-module\.nycrc" />
+    <Content Include="vue-project\node_modules\is-core-module\CHANGELOG.md" />
+    <Content Include="vue-project\node_modules\is-core-module\core.json" />
+    <Content Include="vue-project\node_modules\is-core-module\LICENSE" />
+    <Content Include="vue-project\node_modules\is-core-module\package.json" />
+    <Content Include="vue-project\node_modules\is-core-module\README.md" />
+    <Content Include="vue-project\node_modules\magic-string\dist\magic-string.cjs.js.map" />
+    <Content Include="vue-project\node_modules\magic-string\dist\magic-string.es.js.map" />
+    <Content Include="vue-project\node_modules\magic-string\dist\magic-string.umd.js.map" />
+    <Content Include="vue-project\node_modules\magic-string\LICENSE" />
+    <Content Include="vue-project\node_modules\magic-string\package.json" />
+    <Content Include="vue-project\node_modules\magic-string\README.md" />
+    <Content Include="vue-project\node_modules\nanoid\async\index.browser.cjs" />
+    <Content Include="vue-project\node_modules\nanoid\async\index.cjs" />
+    <Content Include="vue-project\node_modules\nanoid\async\package.json" />
+    <Content Include="vue-project\node_modules\nanoid\bin\nanoid.cjs" />
+    <Content Include="vue-project\node_modules\nanoid\index.browser.cjs" />
+    <Content Include="vue-project\node_modules\nanoid\index.cjs" />
+    <Content Include="vue-project\node_modules\nanoid\LICENSE" />
+    <Content Include="vue-project\node_modules\nanoid\non-secure\index.cjs" />
+    <Content Include="vue-project\node_modules\nanoid\non-secure\package.json" />
+    <Content Include="vue-project\node_modules\nanoid\package.json" />
+    <Content Include="vue-project\node_modules\nanoid\README.md" />
+    <Content Include="vue-project\node_modules\nanoid\url-alphabet\index.cjs" />
+    <Content Include="vue-project\node_modules\nanoid\url-alphabet\package.json" />
+    <Content Include="vue-project\node_modules\path-parse\LICENSE" />
+    <Content Include="vue-project\node_modules\path-parse\package.json" />
+    <Content Include="vue-project\node_modules\path-parse\README.md" />
+    <Content Include="vue-project\node_modules\picocolors\LICENSE" />
+    <Content Include="vue-project\node_modules\picocolors\package.json" />
+    <Content Include="vue-project\node_modules\picocolors\README.md" />
+    <Content Include="vue-project\node_modules\postcss\lib\postcss.mjs" />
+    <Content Include="vue-project\node_modules\postcss\LICENSE" />
+    <Content Include="vue-project\node_modules\postcss\package.json" />
+    <Content Include="vue-project\node_modules\postcss\README.md" />
+    <Content Include="vue-project\node_modules\resolve\.editorconfig" />
+    <Content Include="vue-project\node_modules\resolve\.eslintrc" />
+    <Content Include="vue-project\node_modules\resolve\.github\FUNDING.yml" />
+    <Content Include="vue-project\node_modules\resolve\appveyor.yml" />
+    <Content Include="vue-project\node_modules\resolve\bin\resolve" />
+    <Content Include="vue-project\node_modules\resolve\lib\core.json" />
+    <Content Include="vue-project\node_modules\resolve\LICENSE" />
+    <Content Include="vue-project\node_modules\resolve\package.json" />
+    <Content Include="vue-project\node_modules\resolve\readme.markdown" />
+    <Content Include="vue-project\node_modules\resolve\SECURITY.md" />
+    <Content Include="vue-project\node_modules\resolve\test\module_dir\zmodules\bbb\package.json" />
+    <Content Include="vue-project\node_modules\resolve\test\resolver\baz\package.json" />
+    <Content Include="vue-project\node_modules\resolve\test\resolver\browser_field\package.json" />
+    <Content Include="vue-project\node_modules\resolve\test\resolver\cup.coffee" />
+    <Content Include="vue-project\node_modules\resolve\test\resolver\dot_main\package.json" />
+    <Content Include="vue-project\node_modules\resolve\test\resolver\dot_slash_main\package.json" />
+    <Content Include="vue-project\node_modules\resolve\test\resolver\incorrect_main\package.json" />
+    <Content Include="vue-project\node_modules\resolve\test\resolver\invalid_main\package.json" />
+    <Content Include="vue-project\node_modules\resolve\test\resolver\malformed_package_json\package.json" />
+    <Content Include="vue-project\node_modules\resolve\test\resolver\mug.coffee" />
+    <Content Include="vue-project\node_modules\resolve\test\resolver\multirepo\lerna.json" />
+    <Content Include="vue-project\node_modules\resolve\test\resolver\multirepo\package.json" />
+    <Content Include="vue-project\node_modules\resolve\test\resolver\multirepo\packages\package-a\package.json" />
+    <Content Include="vue-project\node_modules\resolve\test\resolver\multirepo\packages\package-b\package.json" />
+    <Content Include="vue-project\node_modules\resolve\test\resolver\nested_symlinks\mylib\package.json" />
+    <Content Include="vue-project\node_modules\resolve\test\resolver\symlinked\package\package.json" />
+    <Content Include="vue-project\node_modules\resolve\test\resolver\symlinked\_\symlink_target\.gitkeep" />
+    <Content Include="vue-project\node_modules\rollup\CHANGELOG.md" />
+    <Content Include="vue-project\node_modules\rollup\dist\bin\rollup" />
+    <Content Include="vue-project\node_modules\rollup\dist\es\package.json" />
+    <Content Include="vue-project\node_modules\rollup\dist\rollup.browser.js.map" />
+    <Content Include="vue-project\node_modules\rollup\LICENSE.md" />
+    <Content Include="vue-project\node_modules\rollup\package.json" />
+    <Content Include="vue-project\node_modules\rollup\README.md" />
+    <Content Include="vue-project\node_modules\source-map-js\CHANGELOG.md" />
+    <Content Include="vue-project\node_modules\source-map-js\LICENSE" />
+    <Content Include="vue-project\node_modules\source-map-js\package.json" />
+    <Content Include="vue-project\node_modules\source-map-js\README.md" />
+    <Content Include="vue-project\node_modules\source-map\CHANGELOG.md" />
+    <Content Include="vue-project\node_modules\source-map\dist\source-map.min.js.map" />
+    <Content Include="vue-project\node_modules\source-map\LICENSE" />
+    <Content Include="vue-project\node_modules\source-map\package.json" />
+    <Content Include="vue-project\node_modules\source-map\README.md" />
+    <Content Include="vue-project\node_modules\sourcemap-codec\CHANGELOG.md" />
+    <Content Include="vue-project\node_modules\sourcemap-codec\dist\sourcemap-codec.es.js.map" />
+    <Content Include="vue-project\node_modules\sourcemap-codec\dist\sourcemap-codec.umd.js.map" />
+    <Content Include="vue-project\node_modules\sourcemap-codec\LICENSE" />
+    <Content Include="vue-project\node_modules\sourcemap-codec\package.json" />
+    <Content Include="vue-project\node_modules\sourcemap-codec\README.md" />
+    <Content Include="vue-project\node_modules\supports-preserve-symlinks-flag\.eslintrc" />
+    <Content Include="vue-project\node_modules\supports-preserve-symlinks-flag\.github\FUNDING.yml" />
+    <Content Include="vue-project\node_modules\supports-preserve-symlinks-flag\.nycrc" />
+    <Content Include="vue-project\node_modules\supports-preserve-symlinks-flag\CHANGELOG.md" />
+    <Content Include="vue-project\node_modules\supports-preserve-symlinks-flag\LICENSE" />
+    <Content Include="vue-project\node_modules\supports-preserve-symlinks-flag\package.json" />
+    <Content Include="vue-project\node_modules\supports-preserve-symlinks-flag\README.md" />
+    <Content Include="vue-project\node_modules\vite\bin\openChrome.applescript" />
+    <Content Include="vue-project\node_modules\vite\dist\client\client.mjs" />
+    <Content Include="vue-project\node_modules\vite\dist\client\client.mjs.map" />
+    <Content Include="vue-project\node_modules\vite\dist\client\env.mjs" />
+    <Content Include="vue-project\node_modules\vite\dist\client\env.mjs.map" />
+    <Content Include="vue-project\node_modules\vite\LICENSE.md" />
+    <Content Include="vue-project\node_modules\vite\package.json" />
+    <Content Include="vue-project\node_modules\vite\README.md" />
+    <Content Include="vue-project\node_modules\vite\src\client\tsconfig.json" />
+    <Content Include="vue-project\node_modules\vite\types\package.json" />
+    <Content Include="vue-project\node_modules\vue\compiler-sfc\index.mjs" />
+    <Content Include="vue-project\node_modules\vue\compiler-sfc\package.json" />
+    <Content Include="vue-project\node_modules\vue\index.mjs" />
+    <Content Include="vue-project\node_modules\vue\LICENSE" />
+    <Content Include="vue-project\node_modules\vue\package.json" />
+    <Content Include="vue-project\node_modules\vue\README.md" />
+    <Content Include="vue-project\node_modules\vue\server-renderer\index.mjs" />
+    <Content Include="vue-project\node_modules\vue\server-renderer\package.json" />
+    <Content Include="vue-project\package-lock.json" />
+    <Content Include="vue-project\package.json" />
+    <Content Include="vue-project\README.md" />
+    <Content Include="vue-project\src\App.vue" />
+    <Content Include="vue-project\src\components\HelloWorld.vue" />
+    <Content Include="vue-project\src\components\icons\IconCommunity.vue" />
+    <Content Include="vue-project\src\components\icons\IconDocumentation.vue" />
+    <Content Include="vue-project\src\components\icons\IconEcosystem.vue" />
+    <Content Include="vue-project\src\components\icons\IconSupport.vue" />
+    <Content Include="vue-project\src\components\icons\IconTooling.vue" />
+    <Content Include="vue-project\src\components\TheWelcome.vue" />
+    <Content Include="vue-project\src\components\WelcomeItem.vue" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="vue-project\node_modules\%40babel\parser\typings\babel-parser.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\%40vitejs\plugin-vue\dist\index.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\%40vue\compiler-core\dist\compiler-core.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\%40vue\compiler-dom\dist\compiler-dom.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\%40vue\compiler-sfc\dist\compiler-sfc.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\%40vue\compiler-ssr\dist\compiler-ssr.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\%40vue\reactivity-transform\dist\reactivity-transform.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\%40vue\reactivity\dist\reactivity.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\%40vue\runtime-core\dist\runtime-core.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\%40vue\runtime-dom\dist\runtime-dom.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\%40vue\server-renderer\dist\server-renderer.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\%40vue\shared\dist\shared.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\csstype\index.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\esbuild\lib\main.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\estree-walker\types\async.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\estree-walker\types\index.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\estree-walker\types\sync.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\estree-walker\types\walker.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\magic-string\index.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\nanoid\async\index.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\nanoid\index.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\nanoid\non-secure\index.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\picocolors\picocolors.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\picocolors\types.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\postcss\lib\at-rule.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\postcss\lib\comment.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\postcss\lib\container.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\postcss\lib\css-syntax-error.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\postcss\lib\declaration.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\postcss\lib\document.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\postcss\lib\fromJSON.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\postcss\lib\input.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\postcss\lib\lazy-result.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\postcss\lib\list.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\postcss\lib\no-work-result.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\postcss\lib\node.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\postcss\lib\parse.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\postcss\lib\postcss.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\postcss\lib\previous-map.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\postcss\lib\processor.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\postcss\lib\result.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\postcss\lib\root.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\postcss\lib\rule.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\postcss\lib\stringifier.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\postcss\lib\stringify.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\postcss\lib\warning.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\rollup\dist\rollup.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\source-map-js\source-map.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\source-map\source-map.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\sourcemap-codec\dist\types\sourcemap-codec.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\vite\client.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\vite\dist\node\index.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\vite\src\client\client.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\vite\src\client\env.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\vite\src\client\overlay.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\vite\types\alias.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\vite\types\anymatch.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\vite\types\chokidar.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\vite\types\commonjs.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\vite\types\connect.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\vite\types\customEvent.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\vite\types\dynamicImportVars.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\vite\types\hmrPayload.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\vite\types\http-proxy.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\vite\types\importMeta.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\vite\types\shims.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\vite\types\terser.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\vite\types\ws.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\vue\compiler-sfc\index.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\vue\dist\vue.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\vue\macros-global.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\vue\macros.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\vue\ref-macros.d.ts" />
+    <TypeScriptCompile Include="vue-project\node_modules\vue\server-renderer\index.d.ts" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51724</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44330/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
